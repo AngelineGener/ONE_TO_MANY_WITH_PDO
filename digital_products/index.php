@@ -4,14 +4,12 @@ require 'db.php';
 $totalCategories = $conn->query("SELECT COUNT(*) AS total FROM categories")->fetch_assoc()['total'];
 $totalProducts   = $conn->query("SELECT COUNT(*) AS total FROM products")->fetch_assoc()['total'];
 
-// Products per category (shows the one-to-many relationship)
 $perCategory = $conn->query("SELECT c.category_name, COUNT(p.product_id) AS total
                              FROM categories c
                              LEFT JOIN products p ON c.category_id = p.category_id
                              GROUP BY c.category_id, c.category_name
                              ORDER BY c.category_name");
 
-// Latest products
 $latest = $conn->query("SELECT p.title, p.price, c.category_name
                         FROM products p
                         JOIN categories c ON p.category_id = c.category_id
