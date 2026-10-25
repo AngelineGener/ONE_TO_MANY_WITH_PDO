@@ -27,7 +27,6 @@ h2 {
     margin: 28px auto 12px;
 }
 
-/* Navigation */
 nav {
     background: var(--pink-500);
     padding: 14px 20px;
@@ -42,7 +41,6 @@ nav a {
 }
 nav a:hover { text-decoration: underline; }
 
-/* Forms */
 form {
     background: #fff;
     padding: 20px;
@@ -75,7 +73,6 @@ input:focus, textarea:focus, select:focus {
     box-shadow: 0 0 0 3px rgba(231, 84, 128, 0.2);
 }
 
-/* Buttons */
 button {
     background: var(--pink-500);
     color: #fff;
@@ -96,7 +93,6 @@ button[name="delete"] {
 }
 button[name="delete"]:hover { background: var(--pink-100); }
 
-/* Tables */
 table {
     border-collapse: collapse;
     width: 100%;
@@ -126,7 +122,6 @@ td a, form a {
 }
 td a:hover, form a:hover { text-decoration: underline; }
 
-/* Home page */
 .hero {
     text-align: center;
     margin-top: 30px;
